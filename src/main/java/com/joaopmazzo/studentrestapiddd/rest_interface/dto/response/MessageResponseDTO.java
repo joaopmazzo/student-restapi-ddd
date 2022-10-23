@@ -1,4 +1,4 @@
-package com.joaopmazzo.studentrestapiddd.dto.response;
+package com.joaopmazzo.studentrestapiddd.rest_interface.dto.response;
 
 import lombok.Builder;
 import lombok.Data;
