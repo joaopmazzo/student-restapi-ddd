@@ -1,4 +1,4 @@
-package com.joaopmazzo.studentrestapiddd.entity;
+package com.joaopmazzo.studentrestapiddd.infra.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -12,9 +12,10 @@ import javax.persistence.*;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class Address {
+public class AddressModel {
 
     @Id
+    @Column(name = "ADDRESS_ID")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
@@ -22,12 +23,12 @@ public class Address {
     private String street;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    private City city;
+    private CityModel city;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    private Country country;
+    private CountryModel country;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    private State state;
+    private StateModel state;
 
 }
