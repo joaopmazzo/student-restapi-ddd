@@ -1,4 +1,4 @@
-package com.joaopmazzo.studentrestapiddd.entity;
+package com.joaopmazzo.studentrestapiddd.infra.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -12,9 +12,10 @@ import javax.persistence.*;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class State {
+public class StateModel {
 
     @Id
+    @Column(name = "STATE_ID")
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
 
