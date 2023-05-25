@@ -1,12 +1,10 @@
 package com.joaopmazzo.studentrestapiddd.domain;
 
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.NotNull;
 
 @Builder
 @Data
@@ -16,7 +14,7 @@ public class Address {
 
     private Long id;
 
-    @NotEmpty
+    @NotNull
     private String street;
 
     @NotNull

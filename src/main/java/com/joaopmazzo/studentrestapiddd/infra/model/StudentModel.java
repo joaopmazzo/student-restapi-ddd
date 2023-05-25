@@ -6,8 +6,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.*;
-import javax.validation.constraints.Email;
+import jakarta.persistence.*;
+
 import java.time.LocalDate;
 
 @Entity
@@ -15,6 +15,7 @@ import java.time.LocalDate;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
+@Table(name = "STUDENT")
 public class StudentModel {
 
     @Id
@@ -28,7 +29,7 @@ public class StudentModel {
     @Column(nullable = false)
     private LocalDate birthDate;
 
-    @Email
+    //@Email
     @Column(nullable = false)
     private String email;
 

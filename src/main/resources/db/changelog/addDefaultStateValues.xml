@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog
+   xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd">
+
+    <changeSet id="f8f8ebfe-9a5d-11ed-a8fc-0242ac120002" author="Mazzo">
+         <preConditions onFail="WARN" onError="HALT">
+            <tableExists tableName="state" />
+            <rowCount expectedRows="0" tableName="state" />
+        </preConditions>
+
+        <comment>Popuplate 'state' table for test</comment>
+
+        <sql>
+            INSERT INTO state (state) VALUES ('São Paulo'), ('Rio de Janeiro'), ('North Holland'), ('Zeeland'), ('Illinois'), ('Province of Como'), ('Province of Salerno'), ('Kanto'), ('Tohoku');
+        </sql>
+    </changeSet>
+
+</databaseChangeLog>
